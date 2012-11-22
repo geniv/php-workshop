@@ -190,7 +190,7 @@
 
 
 
-# f.e. 5) priklad slozitejsi tridy (float interface)
+# f.e. 5) priklad slozitejsi tridy (float interface) - trida generujici formular (jednoduchy navrh)
 
   // trida s plavoucim rozhrannim
   class FloatClass {
@@ -220,7 +220,7 @@
     function __toString() { // prevod do textu
       $result = "<form action='' method='post'>\n";
 
-      foreach ($this->elems as $key => $value) {
+      foreach ($this->elems as $key => $value) {  //cyklus na projiti pole
         switch ($value['type']) {
           case 'text':
           case 'password':

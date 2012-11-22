@@ -9,6 +9,7 @@ zdrojove soubory workshopu
 * php workshop - 26.11.2012 (part-2)
   - string
   - array
+  - databaze pod drobnohledem (PDO)
   - ?session, cookie, autorizace
   - ?propojeni db + form
   - ?priklad rezervace

@@ -34,7 +34,9 @@
 
 
 # f.e. 2) priklad objektove PDO
-  //~ var_dump(PDO::getAvailableDrivers());
+
+  print_r(PDO::getAvailableDrivers());  //vypsani distupnych driveru
+
   $pdo_string = 'oci:dbname='.$host.';charset='.$charset;
   try {
       $dbh = new PDO($pdo_string, $user, $pswd);
