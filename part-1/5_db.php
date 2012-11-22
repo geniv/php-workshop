@@ -36,16 +36,18 @@
 # f.e. 2) priklad objektove PDO
 
   print_r(PDO::getAvailableDrivers());  //vypsani distupnych driveru
+  // dostupne PDO drivery: http://php.net/manual/en/pdo.drivers.php
 
-  $pdo_string = 'oci:dbname='.$host.';charset='.$charset;
+  $pdo_string = 'oci:dbname='.$host.';charset='.$charset; //vytvoreni uri pro PDO
+  // vice o PDO: http://php.net/manual/en/book.pdo.php
   try {
-      $dbh = new PDO($pdo_string, $user, $pswd);
+      $dbh = new PDO($pdo_string, $user, $pswd);  //vytvoreni objektu (handleru)
 
-      $SQLCom = "SELECT * FROM USERS";
+      $SQLCom = "SELECT * FROM USERS";  //zadani dotazu
       $result = $dbh->query($SQLCom);
       if ($result) {
-        foreach($result as $row) {
-          var_dump ($row);
+        foreach($result as $row) {  //proiterovani vysledku
+          var_dump($row); //nejaky vypis/pracovani
         }
       }
 

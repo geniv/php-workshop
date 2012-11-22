@@ -2,12 +2,12 @@
 
 # databaze pod drobnohledem (PDO)
 
-# create & drop
+# create & drop + binding
 
-# insert
+# insert + binding
 
-# update
+# update + binding
 
-# delete
+# delete + binding
 
-# select
+# select + binding
