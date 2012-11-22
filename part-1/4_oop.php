@@ -186,6 +186,9 @@
   // vice info o parent: http://php.net/manual/en/keyword.parent.php
   // vice info o static: http://www.php.net/manual/en/language.oop5.late-static-bindings.php
 
+  // jde vytvorit i final tridy (instancne nevytvoritelne): http://www.php.net/manual/en/language.oop5.final.php
+  // jde vytvorit i abstraktni tridy: http://php.net/manual/en/language.oop5.abstract.php
+  // funguje zde i definice viditelnosti: http://www.php.net/manual/en/language.oop5.visibility.php
 
 
 
