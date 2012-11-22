@@ -1,5 +1,5 @@
-zdrojove soubory
-----------------
+zdrojove soubory workshopu
+--------------------------
 * php workshop - 22.11.2012 (part-1)
   - adresarova struktura
   - syntaxe
