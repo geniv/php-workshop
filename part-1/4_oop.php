@@ -43,7 +43,7 @@
 
 
 # f.e. 2) priklad slozitejsi tridy (tzn magicke metody)
-  class NotSimpleClass1 {
+  class NotSimpleClass {
     private $pole = null;
 
     function __construct($pole) { //konstruktor
@@ -61,6 +61,7 @@
         var_dump('volano: __destruct');
     }
 
+    // vice info o pretezovani: http://www.php.net/manual/en/language.oop5.overloading.php
     function __call($name, $arguments) {  //instancni pretezovani
       var_dump('volano: __call', $name, $arguments);
     }
@@ -94,9 +95,9 @@
     }
   }
 
-  $pole = array('a' => 'b', 'c' => 5, 'd' => true, 'e' => 3.14);
+  $pole = array('a' => 'b', 'c' => 5, 'd' => true, 'e' => 3.14);  // pole pro konstruktor
 
-  $nsc = new NotSimpleClass1($pole);
+  $nsc = new NotSimpleClass($pole); // vytvoreni instance
 
   $nsc->mojeMetoda('ahoj instance');
   $nsc->mojeMetoda('prvni instance', 'druha');
@@ -105,6 +106,8 @@
 
   var_dump($nsc);
 
+  // toto je jedna z moznosti jak pracovat s vnitrnim atributem (napr pole) na venek
+  // vice o magickych metodach: http://www.php.net/manual/en/language.oop5.magic.php
   var_dump($nsc->a);
 
   $nsc->c += 10;
@@ -120,6 +123,8 @@
 
   $nsc = null;
   $nscX = null;
+
+  // nad instanci jde i iterovat viz: http://www.php.net/manual/en/language.oop5.iterations.php
 
 
 
@@ -150,6 +155,7 @@
 
 
 # f.e. 4) priklad slozitejsi tridy (dedicnost, implementace)
+  // pak i existuji preddefinovane rozhranni via: php.net/manual/en/reserved.interfaces.php
 
   //definovane rozhranni
   interface IRozhranni {
@@ -166,13 +172,20 @@
 
   class MojeTrida extends Rodic implements IRozhranni {
     // aktualni trida
-    function mojeFunkce() {}
+    function mojeFunkce() {}  // musi byt deklarovano, diky rozhranni
   }
 
   $mt = new MojeTrida;
   var_dump($mt);
 
-  //existuje jeste promenne: self & parent
+  // pouzivani :: http://www.php.net/manual/en/language.oop5.paamayim-nekudotayim.php
+
+  //existuje jeste promenne: self & parent & static
+
+  // vice info o self: http://php.net/manual/en/language.oop5.static.php
+  // vice info o parent: http://php.net/manual/en/keyword.parent.php
+  // vice info o static: http://www.php.net/manual/en/language.oop5.late-static-bindings.php
+
 
 
 

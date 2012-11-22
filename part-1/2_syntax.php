@@ -101,7 +101,7 @@
 
 
 
-# f.e. 9) podminyk jsou zapsat i na min radku, na ukor horsi citelnosti
+# f.e. 9) podminky jdou zapsat i na min radku, na ukor horsi citelnosti
 <?php
   echo ($true_or_false ? 'true' : 'false');
 ?>

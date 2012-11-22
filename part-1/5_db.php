@@ -47,12 +47,6 @@
         }
       }
 
-
-//~ $db_username = "youusername";
-//~ $db_password = "yourpassword";
-//~ $db = "oci:dbname=yoursid";
-//~ $conn = new PDO($db,$db_username,$db_password);
-
   } catch (PDOException $e) {
       echo "Failed to obtain database handle: " . $e->getMessage();
       exit;

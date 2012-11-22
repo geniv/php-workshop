@@ -14,7 +14,7 @@
 
   echo str_repeat(PHP_EOL, 5);  //vlozeni 5x enter
 
-  echo "spojeni 2) textu: {$var_text} a cisla: $var_cislo";
+  echo "spojeni 2) textu: {$var_text} a cisla: $var_cislo"; // { & } jsou pro prehlednost a pro slozitejsi konstrukte promennych jako jsou pole
 
 
 
@@ -45,9 +45,9 @@
 
 
 # f.e. 3) vkladani souboru (vlozeni tam kde chceme, trochu lip), potrebny soubor: 3_1_soubor.php
-  # include / require muze fungovat jako bezparametricka funkce
+  # include / require muze fungovat jako bez-parametricka funkce
 
-  $var_include = include "3_1_soubor.php";  //zpusobi to return
+  $var_include = include "3_1_soubor.php";  // zpusobi to return
 
   echo "tady je nejaky vlozeny text(1): $var_include";
 
@@ -102,7 +102,7 @@
 
 
   # 4.3) lepsi reseni
-  // definice stanek, vyhoda: lze podle toho generovat menu
+  // definice stanek, vyhoda: lze podle tohoto pole generovat menu + lehke rozsireni o dalsi stranky
   $pages = array(
             'home' => 'home.php',
             'kontakt' => 'kontakt.php',
