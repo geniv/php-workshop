@@ -5,8 +5,8 @@ zdrojove soubory workshopu
   - adresarova struktura
   - syntaxe
   - vkladani souboru
-  - oop
-  - db
+  - oop (class, overloading, interface, extends, float interface, singleton)
+  - db (oci8, PDO)
 
 * php workshop - 26.11.2012 (part-2)
   - string

@@ -259,3 +259,35 @@
   echo $form;
 
 
+
+
+# f.e. 6) priklad cistejsi implementace Singletonu
+
+  final class Singleton { // final znemozni dalsi kopirovani tridy
+    private static $instance = null;  //instance silgletonu
+
+    private function __construct() {  // znemozneni primeho vytvoreni instance
+      // pripadna incializace vnitrnich promennych
+      $this->atribut = null;
+    }
+
+    private function __clone() {} // zmenozneni vytvoreni instance jinym zpuobem
+    private function __wakeup() {}
+
+    public static function getInstance() {  // hlavni metoda
+      if (is_null(self::$instance)) {
+        self::$instance = new self;
+      }
+      return self::$instance;
+    }
+
+    // nejake dalsi vlastni metody (uz instancni)
+    public function mojeMedotaInstance($var) {
+      $this->atribut = $var;
+      return $this;
+    }
+  }
+
+  $singl = Singleton::getInstance();
+
+  $singl->mojeMedotaInstance('a')->mojeMedotaInstance('b');
