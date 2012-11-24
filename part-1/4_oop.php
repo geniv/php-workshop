@@ -265,13 +265,14 @@
 
   final class Singleton { // final znemozni dalsi kopirovani tridy
     private static $instance = null;  //instance silgletonu
+    private $atribut = null;
 
     private function __construct() {  // znemozneni primeho vytvoreni instance
       // pripadna incializace vnitrnich promennych
       $this->atribut = null;
     }
 
-    private function __clone() {} // zmenozneni vytvoreni instance jinym zpuobem
+    private function __clone() {} // zmenozneni vytvoreni instance jinym zpusobem (nemusi byt)
     private function __wakeup() {}
 
     public static function getInstance() {  // hlavni metoda
@@ -288,6 +289,7 @@
     }
   }
 
-  $singl = Singleton::getInstance();
+  $singl = Singleton::getInstance();  //vytvoreni instance
 
   $singl->mojeMedotaInstance('a')->mojeMedotaInstance('b');
+  var_dump($singl);
