@@ -278,5 +278,13 @@
       var_dump('tohle je validni cislo');
     }
 
+    // parsrovani v textu (navrat v ciselnych indexech)
+    $subject = 'foobar: 2008';
+    preg_match('/(\w+): (\d+)/', $subject, $out);
+    var_dump($out);
 
+    // rarsovani (navrat v asociativnim poli)
+    preg_match('/(?P<nazev>\w+): (?P<cislo>\d+)/', $subject, $out);
+    var_dump($out);
 
+    # co se tyce ruznych formatu je dobre googlit
