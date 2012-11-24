@@ -298,6 +298,7 @@
   # via napriklad: http://www.jakpsatweb.cz/server/htaccess.html
   # zdroju je opet nespocet a existuji i generatory
 
+  echo "
     # zakazovani pruchodu slozek
     Options -Indexes
 
@@ -318,6 +319,7 @@
 
     # podstrkuje: www.example.com/o-nas/5  ==>  www.example.com/index.php?action=o-nas&page=5
     RewriteRule ^([a-zA-Z-\_]+)/([0-9]+)/?$ index.php?action=$1&page=$2 [L]
+  ";
 
     echo PHP_EOL;
 
