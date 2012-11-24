@@ -288,3 +288,55 @@
     var_dump($out);
 
     # co se tyce ruznych formatu je dobre googlit
+
+    echo PHP_EOL;
+
+
+
+
+# rewrite alias pekna url s .htaccess
+  # via napriklad: http://www.jakpsatweb.cz/server/htaccess.html
+  # zdroju je opet nespocet a existuji i generatory
+
+    # zakazovani pruchodu slozek
+    Options -Indexes
+
+    # error dokumenty (dalsi kody napr: 400, 401, 402, 403, 404, 500, 501, 502, 503) [stavove kody]
+    ErrorDocument 404 /error_page/404.html
+
+    # zapinani rewrite engine
+    RewriteEngine on
+
+    # pripadne smerovani korenu
+    RewriteBase /
+
+    # podstrkuje: www.example.com/5  ==>  www.example.com/index.php?page=5
+    RewriteRule ^([0-9]+)/?$ index.php?page=$1 [L]
+
+    # podstrkuje: www.example.com/o-nas  ==>  www.example.com/index.php?action=o-nas
+    RewriteRule ^([a-zA-Z-\_]+)/?$ index.php?action=$1 [L]
+
+    # podstrkuje: www.example.com/o-nas/5  ==>  www.example.com/index.php?action=o-nas&page=5
+    RewriteRule ^([a-zA-Z-\_]+)/([0-9]+)/?$ index.php?action=$1&page=$2 [L]
+
+    echo PHP_EOL;
+
+
+
+
+# overovani prazdnoty retezcu
+
+  # empty vs isset
+  $var = 'a';
+  var_dump(empty($var));  //prazdny?
+  var_dump(!isset($var)); //nenastaveny?
+  echo PHP_EOL;
+
+  $var = '';
+  var_dump(empty($var));
+  var_dump(!isset($var));
+  echo PHP_EOL;
+
+  $var = null;
+  var_dump(empty($var));
+  var_dump(!isset($var));
