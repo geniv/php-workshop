@@ -1,15 +1,16 @@
 zdrojove soubory workshopu
 --------------------------
 
-* php workshop - 22.11.2012 (part-1)
+part-1:
+* php workshop - 22.11.2012
   - adresarova struktura
   - syntaxe
   - vkladani souboru (include, require)
   - oop (class, overloading, interface, extends, float interface, singleton)
   - db (oci8, PDO)
 
-
-* php workshop - 26.11.2012 (part-2)
+part-2:
+* php workshop - 26.11.2012
   - string (string, url, serializace, md5, hash, parametry funkce, datum, regexp, rewrite, empty vs isset)
   - array (vytvareni, spojovani, prohazovani, nacitani, slice/splice, overovani, razeni, pocitani)
   - databaze pod drobnohledem (PDO, insert, update, select, delete)
