@@ -15,7 +15,9 @@
     //insert
     $sql = 'insert into users (username, email) values (?, ?)';
     $state = $conn->prepare($sql);
-    var_dump($state->execute(array('franta', 'franta@email.cz')));
+    if (!$state->execute(array('franta', 'franta@email.cz'))) {
+      echo 'nepodarilo se vlozit radek';
+    }
 
     $tab = '<table border=1>
     <tr>
@@ -26,15 +28,39 @@
     ';
 
     //select
-    $result = $conn->query('select * from users order by id');
-    if ($result) {
-      foreach($result as $row) {
-        $tab .= '<tr>
-        <td>'.$row['ID'].'</td>
-        <td>'.$row['USERNAME'].'</td>
-        <td>'.$row['EMAIL'].'</td>
-        </tr>';
-      }
+    //~ $result = $conn->query('select * from users order by id');
+    //~ if ($result) {
+      //~ foreach($result as $row) {
+        //~ $tab .= '<tr>
+        //~ <td>'.$row['ID'].'</td>
+        //~ <td>'.$row['USERNAME'].'</td>
+        //~ <td>'.$row['EMAIL'].'</td>
+        //~ </tr>';
+      //~ }
+    //~ }
+
+    $sql = 'select * from users order by id';
+    $state = $conn->prepare($sql);
+    $state->execute();
+
+    while ($row = $state->fetch()) {
+      $tab .= '<tr>
+      <td>'.$row['ID'].'</td>
+      <td>'.$row['USERNAME'].'</td>
+      <td>'.$row['EMAIL'].'</td>
+      </tr>';
+    }
+
+    $sql = 'select * from users where username=?';
+    $state = $conn->prepare($sql);
+    $state->execute(array('franta'));
+
+    while ($row = $state->fetch()) {
+      $tab .= '<tr>
+      <th>'.$row['ID'].'</th>
+      <th>'.$row['USERNAME'].'</th>
+      <th>'.$row['EMAIL'].'</th>
+      </tr>';
     }
 
     $tab .= '
@@ -45,7 +71,9 @@
     //delete
     $sql = 'delete from users where username=?';
     $state = $conn->prepare($sql);
-    var_dump($state->execute(array('franta')));
+    if (!$state->execute(array('franta'))) {
+      echo 'nepodarilo se odmazat radek';
+    }
 
   } catch (PDOException $e) {
     die("Failed to obtain database handle: " . $e->getMessage());
