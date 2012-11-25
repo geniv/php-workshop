@@ -12,7 +12,7 @@ zdrojove soubory workshopu
 * php workshop - 26.11.2012 (part-2)
   - string (string, url, serializace, md5, hash, parametry funkce, datum, regexp, rewrite, empty vs isset)
   - array (vytvareni, spojovani, prohazovani, nacitani, slice/splice, overovani, razeni, pocitani)
-  - databaze pod drobnohledem (PDO)
+  - databaze pod drobnohledem (PDO, insert, update, select, delete)
     - ?pripadne externi moduly ktere uz nekdo napsal pro usnadneni/urychleni prace
     - ?session, cookie, autorizace
     - ?propojeni db + form
