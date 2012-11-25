@@ -13,13 +13,13 @@ zdrojove soubory workshopu
   - array (vytvareni, spojovani, prohazovani, nacitani, slice/splice, overovani, razeni, pocitani)
   - databaze pod drobnohledem (PDO)
 
-  - ?pripadne externi moduly ktere uz nekdo napsal pro usnadneni/urychleni prace
-  - ?session, cookie, autorizace
-  - ?propojeni db + form
-  - ?priklad rezervace
+    - ?pripadne externi moduly ktere uz nekdo napsal pro usnadneni/urychleni prace
+    - ?session, cookie, autorizace
+    - ?propojeni db + form
+    - ?priklad rezervace
 
 
-* dobre rady:
+* dobre rady
   - nevynalezat jiz vynalezene kolo
   - je dobre pouzivat citelny kod
   - je dobre delat komentare
