@@ -18,7 +18,7 @@ php workshop - 26.11.2012 (part-2)
   - trida pro praci se session a cookie
   - filesystem
   - propojeni db + form
-    - ?priklad rezervace
+  - princip rezervace
 
 
 dobre rady
