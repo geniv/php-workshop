@@ -15,8 +15,8 @@ php workshop - 26.11.2012 (part-2)
   - array (vytvareni, spojovani, prohazovani, nacitani, slice/splice, overovani, razeni, pocitani)
   - databaze pod drobnohledem (PDO, insert, update, select, delete)
   - externi moduly ktere uz nekdo napsal pro usnadneni/urychleni prace
-  - trida pro praci se session
-    - ?cookie, autorizace
+  - trida pro praci se session a cookie
+  - filesystem
     - ?propojeni db + form
     - ?priklad rezervace
 

@@ -2,11 +2,15 @@
 
 # priklad tridy pracujici objektove session
 
+
+
+
+# SESSION
   final class SessionSingleton { // final znemozni dalsi kopirovani tridy
     private static $instance = null;  //instance silgletonu
     private $session = null;
 
-    const MAINSECT = 'session_system_section';
+    const MAINSECT = 'session_system_section';  //pro jednotuchost sekce pro zarazeni
 
     private function __construct() {  // znemozneni primeho vytvoreni instance
       session_start();
@@ -42,16 +46,44 @@
     }
   }
 
+  # pokud by melo jit o propracovanejsi zpusob
+  # tak by se jeste vytvarela samotna session section jako vnitrni instance
+
   $sess = SessionSingleton::getInstance();
 
-  $sess->moje = "ahoj";
+  $sess->moje = "ahoj"; // set
 
-  var_dump($sess->moje);
+  var_dump($sess->moje);  // get
 
-  var_dump(isset($sess->moje1));
-  var_dump(isset($sess->moje));
+  var_dump(isset($sess->moje1));  // isset
+  var_dump(isset($sess->moje));   // isset
 
-
-  unset($sess->moje);
+  unset($sess->moje); // unset
 
   var_dump($_SESSION);
+
+
+
+
+# COOKIE
+  // abstrktni (primo nevytvoritelna) trida
+  abstract class Cookie {
+
+    # nacteni cookie
+    public static function get($name) {
+      return (isset($_COOKIE[$name]) ? $_COOKIE[$name] : null);
+    }
+
+    # nastaveni cookie
+    public static function set($name, $value, $time = 3600) {
+      return setcookie($name, $value, time() + $time);
+    }
+  }
+
+  Cookie::set('cislo', 23456);
+
+  var_dump(Cookie::get('cislo'));
+
+  var_dump(Cookie::get('cisloXX'));
+
+  var_dump($_COOKIE);
