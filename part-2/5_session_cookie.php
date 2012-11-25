@@ -1,6 +1,9 @@
 <?php
 
 # priklad tridy pracujici objektove session
+# via: http://php.net/manual/en/book.session.php
+# via: http://php.net/manual/en/function.setcookie.php
+
 
 
 
