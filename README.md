@@ -17,7 +17,7 @@ php workshop - 26.11.2012 (part-2)
   - externi moduly ktere uz nekdo napsal pro usnadneni/urychleni prace
   - trida pro praci se session a cookie
   - filesystem
-    - ?propojeni db + form
+  - propojeni db + form
     - ?priklad rezervace
 
 

@@ -66,3 +66,6 @@
 
   # zjisteni typu opravneni
   echo substr(sprintf('%o', fileperms('/tmp')), -4);
+
+  # vraceni aktualniho nazvu souboru
+  echo basename($_SERVER['SCRIPT_NAME']);
