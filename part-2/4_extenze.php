@@ -35,6 +35,11 @@
   # via: http://www.adminer.org/
 
 
+  # php-async
+  # Convenient API for asynchronous operations in PHP. (by Jakub Vrana)
+  # via: https://github.com/vrana/php-async
+
+
   # Nette
   # via: http://nette.org/cs/
 
