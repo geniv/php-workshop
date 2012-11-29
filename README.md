@@ -21,6 +21,12 @@ php workshop - 26.11.2012 (part-2)
   - princip rezervace
 
 
+php workshop - 29.11.2012 (part-3)
+  - SimpleXml (xml parser / generator)
+  - TinyMCE (WYSIWYG)
+  - CKEditor (WYSIWYG)
+
+
 dobre rady
   - nevynalezat jiz vynalezene kolo
   - je dobre pouzivat citelny kod
