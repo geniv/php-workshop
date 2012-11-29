@@ -21,7 +21,7 @@ php workshop - 26.11.2012 (part-2)
   - princip rezervace
 
 
-php workshop - 29.11.2012 (part-3) [dekuji za spolucast @h0nza]
+php workshop - 29.11.2012 (part-3) [dekuji za spolupraci @h0nza]
   - SimpleXml (xml parser / generator)
   - TinyMCE (WYSIWYG)
   - CKEditor (WYSIWYG)
